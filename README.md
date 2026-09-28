@@ -7,7 +7,7 @@ Live at: https://shashidharhalady.github.io
 
 ## Adding a new article
 
-1. Create a new file in `_posts/` named:
+1. Create a new file in `docs/_posts/` named:
 
    ```
    YYYY-MM-DD-a-short-title.md
@@ -35,6 +35,7 @@ minute of the push, no manual deploy step required.
 ## Local preview (optional)
 
 ```
+cd docs
 bundle install
 bundle exec jekyll serve
 ```
