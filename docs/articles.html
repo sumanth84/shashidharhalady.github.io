@@ -1,13 +1,12 @@
 ---
 layout: default
-title: Home
-permalink: /
+title: Articles
+permalink: /articles/
 ---
-<p class="site-intro">Articles in English and ಕನ್ನಡ.</p>
+<h1 class="page-title">Articles</h1>
 
-<h2 class="section-heading">Recent Articles</h2>
 <ul class="post-list">
-  {% for post in site.posts limit: 5 %}
+  {% for post in site.posts %}
   <li class="post-list-item">
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     <span class="post-list-meta">
@@ -17,5 +16,3 @@ permalink: /
   </li>
   {% endfor %}
 </ul>
-
-<p><a href="{{ '/articles/' | relative_url }}">See all articles &rarr;</a></p>

@@ -57,6 +57,11 @@ body {
   color: var(--color-accent);
 }
 
+.site-nav a.active {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
 .site-main {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -97,8 +102,32 @@ body {
   margin-top: 0.2rem;
 }
 
-.post-title {
+.post-title,
+.page-title {
   margin-bottom: 0.25rem;
+}
+
+.section-heading {
+  font-size: 1rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 2rem 0 0.5rem;
+}
+
+.awards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.awards-list-item {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.awards-list-item p {
+  margin: 0.3rem 0 0;
 }
 
 .post-meta {

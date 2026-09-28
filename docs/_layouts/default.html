@@ -15,7 +15,10 @@
   <header class="site-header">
     <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav class="site-nav">
-      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
+      <a href="{{ '/articles/' | relative_url }}"{% if page.url == '/articles/' %} class="active"{% endif %}>Articles</a>
+      <a href="{{ '/awards/' | relative_url }}"{% if page.url == '/awards/' %} class="active"{% endif %}>Awards</a>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} class="active"{% endif %}>About</a>
       <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
     </nav>
   </header>
