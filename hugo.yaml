@@ -1,0 +1,123 @@
+baseURL: "https://shashidharhalady.github.io/"
+title: Shashidhar Halady
+theme: PaperMod
+languageCode: en
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+enableRobotsTXT: true
+enableEmoji: true
+hasCJKLanguage: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+minify:
+  disableXML: true
+
+pagination:
+  pagerSize: 10
+
+languages:
+  en:
+    languageName: English
+    weight: 1
+    contentDir: content/en
+    params:
+      description: Articles by Shashidhar Halady, in English.
+  kn:
+    languageName: ಕನ್ನಡ
+    weight: 2
+    contentDir: content/kn
+    params:
+      description: ಶಶಿಧರ ಹಳದಿಯವರ ಲೇಖನಗಳು, ಕನ್ನಡದಲ್ಲಿ.
+      homeInfoParams:
+        Title: "ಶಶಿಧರ ಹಳದಿ"
+        Content: "ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದಲ್ಲಿ ಲೇಖನಗಳು."
+    menu:
+      main:
+        - identifier: articles
+          name: ಲೇಖನಗಳು
+          url: /posts/
+          weight: 10
+        - identifier: awards
+          name: ಪ್ರಶಸ್ತಿಗಳು
+          url: /awards/
+          weight: 20
+        - identifier: about
+          name: ನನ್ನ ಬಗ್ಗೆ
+          url: /about/
+          weight: 30
+        - identifier: search
+          name: ಹುಡುಕಿ
+          url: /search/
+          weight: 40
+
+params:
+  env: production
+  title: Shashidhar Halady
+  description: Articles in English and ಕನ್ನಡ (Kannada)
+  author: Shashidhar Halady
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowWordCount: false
+  ShowFullTextinRSS: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    disableHLJS: false
+    favicon: ""
+
+  profileMode:
+    enabled: false
+
+  homeInfoParams:
+    Title: "Shashidhar Halady"
+    Content: "Articles in English and ಕನ್ನಡ (Kannada)."
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/shashidharhalady"
+    - name: rss
+      url: "index.xml"
+
+menu:
+  main:
+    - identifier: articles
+      name: Articles
+      url: /posts/
+      weight: 10
+    - identifier: awards
+      name: Awards
+      url: /awards/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
