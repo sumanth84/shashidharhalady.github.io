@@ -1,0 +1,36 @@
+- id: prev_page
+  translation: "ಹಿಂದಿನ"
+
+- id: next_page
+  translation: "ಮುಂದಿನ"
+
+- id: read_time
+  translation:
+    one: "1 ನಿಮಿಷ"
+    other: "{{ .Count }} ನಿಮಿಷಗಳು"
+
+- id: words
+  translation:
+    one: "ಪದ"
+    other: "{{ .Count }} ಪದಗಳು"
+
+- id: toc
+  translation: "ವಿಷಯ ಸೂಚಿ"
+
+- id: translations
+  translation: "ಇತರ ಭಾಷೆಗಳು"
+
+- id: home
+  translation: "ಮುಖಪುಟ"
+
+- id: edit_post
+  translation: "ಸಂಪಾದಿಸಿ"
+
+- id: code_copy
+  translation: "ನಕಲಿಸಿ"
+
+- id: code_copied
+  translation: "ನಕಲಿಸಲಾಗಿದೆ!"
+
+- id: search_placeholder
+  translation: "ಹುಡುಕಿ..."

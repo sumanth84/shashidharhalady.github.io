@@ -1,0 +1,47 @@
+/* Self-hosted Noto Sans Kannada, so Kannada text renders correctly
+   without depending on Google Fonts or the visitor's OS having a
+   Kannada font installed. */
+@font-face {
+  font-family: "Noto Sans Kannada";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSansKannada-Regular.woff2") format("woff2");
+  unicode-range: U+0951-0952, U+0964-0965, U+0C80-0CF3, U+1CD0, U+1CD2-1CD3,
+    U+1CDA, U+1CF2, U+1CF4, U+200C-200D, U+20B9, U+25CC, U+A830-A835;
+}
+
+@font-face {
+  font-family: "Noto Sans Kannada";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSansKannada-Bold.woff2") format("woff2");
+  unicode-range: U+0951-0952, U+0964-0965, U+0C80-0CF3, U+1CD0, U+1CD2-1CD3,
+    U+1CDA, U+1CF2, U+1CF4, U+200C-200D, U+20B9, U+25CC, U+A830-A835;
+}
+
+/* Kannada text needs a taller line-height and the Kannada-first
+   font stack; applied automatically to the whole page when the
+   Kannada language section is active (html[lang="kn"]). */
+html[lang="kn"] body,
+:lang(kn) {
+  font-family: "Noto Sans Kannada", "Noto Sans", sans-serif;
+  line-height: 1.9;
+}
+
+/* Accent color tweak so the site doesn't look like a stock PaperMod
+   install. */
+:root {
+  --primary: #6d28d9;
+  --secondary: #6d28d9;
+}
+
+.top-link {
+  background: var(--primary);
+}
+
+.list article.archive-entry:not(:last-child),
+article.post-entry:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
