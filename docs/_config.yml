@@ -1,10 +1,16 @@
 title: Shashidhar Halady
+tagline: Writer &middot; ಬರಹಗಾರ
 description: >-
   Articles in English and ಕನ್ನಡ (Kannada)
 url: "https://shashidharhalady.github.io"
 baseurl: ""
 lang: en
 theme: null
+
+author:
+  name: Shashidhar Halady
+  github: shashidharhalady
+  email: ""
 
 markdown: kramdown
 kramdown:

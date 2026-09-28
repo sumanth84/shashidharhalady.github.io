@@ -7,28 +7,39 @@
   {% seo %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% feed_meta %}
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="site-nav">
-      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
-      <a href="{{ '/articles/' | relative_url }}"{% if page.url == '/articles/' %} class="active"{% endif %}>Articles</a>
-      <a href="{{ '/awards/' | relative_url }}"{% if page.url == '/awards/' %} class="active"{% endif %}>Awards</a>
-      <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} class="active"{% endif %}>About</a>
-      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-    </nav>
+    <div class="site-header-inner">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
+        <a href="{{ '/articles/' | relative_url }}"{% if page.url == '/articles/' %} class="active"{% endif %}>Articles</a>
+        <a href="{{ '/awards/' | relative_url }}"{% if page.url == '/awards/' %} class="active"{% endif %}>Awards</a>
+        <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} class="active"{% endif %}>About</a>
+        <a href="{{ '/feed.xml' | relative_url }}" class="site-nav-rss">RSS</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="site-main">
+  <main id="main" class="site-main">
     {{ content }}
   </main>
 
   <footer class="site-footer">
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    <div class="site-footer-inner">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+      <p class="site-footer-links">
+        {% if site.author.github != "" %}<a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
+        {% if site.author.email != "" %}<a href="mailto:{{ site.author.email }}">Email</a>{% endif %}
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </p>
+    </div>
   </footer>
 </body>
 </html>

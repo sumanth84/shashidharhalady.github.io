@@ -3,16 +3,21 @@ layout: default
 title: Articles
 permalink: /articles/
 ---
-<h1 class="page-title">Articles</h1>
+<header class="page-header">
+  <h1 class="page-title">Articles</h1>
+  <p class="page-subtitle">{{ site.posts | size }} article{% unless site.posts.size == 1 %}s{% endunless %} in English and ಕನ್ನಡ.</p>
+</header>
 
 <ul class="post-list">
   {% for post in site.posts %}
   <li class="post-list-item">
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     <span class="post-list-meta">
       {{ post.date | date: "%b %-d, %Y" }}
-      &middot; {% if post.lang == "kn" %}ಕನ್ನಡ{% else %}English{% endif %}
+      &middot; <span class="lang-tag">{% if post.lang == "kn" %}ಕನ್ನಡ{% else %}English{% endif %}</span>
     </span>
   </li>
+  {% else %}
+  <li class="post-list-empty">No articles yet — check back soon.</li>
   {% endfor %}
 </ul>

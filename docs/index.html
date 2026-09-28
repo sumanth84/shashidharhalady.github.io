@@ -3,19 +3,30 @@ layout: default
 title: Home
 permalink: /
 ---
-<p class="site-intro">Articles in English and ಕನ್ನಡ.</p>
+<section class="hero">
+  <div class="hero-avatar" aria-hidden="true">{{ site.title | slice: 0, 1 }}</div>
+  <h1 class="hero-name">{{ site.title }}</h1>
+  {% if site.tagline %}<p class="hero-tagline">{{ site.tagline }}</p>{% endif %}
+  <p class="hero-desc">{{ site.description }}</p>
+</section>
 
-<h2 class="section-heading">Recent Articles</h2>
-<ul class="post-list">
-  {% for post in site.posts limit: 5 %}
-  <li class="post-list-item">
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <span class="post-list-meta">
-      {{ post.date | date: "%b %-d, %Y" }}
-      &middot; {% if post.lang == "kn" %}ಕನ್ನಡ{% else %}English{% endif %}
-    </span>
-  </li>
-  {% endfor %}
-</ul>
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-heading">Recent Articles</h2>
+    <a class="section-link" href="{{ '/articles/' | relative_url }}">See all &rarr;</a>
+  </div>
 
-<p><a href="{{ '/articles/' | relative_url }}">See all articles &rarr;</a></p>
+  <ul class="post-list">
+    {% for post in site.posts limit: 5 %}
+    <li class="post-list-item">
+      <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="post-list-meta">
+        {{ post.date | date: "%b %-d, %Y" }}
+        &middot; <span class="lang-tag">{% if post.lang == "kn" %}ಕನ್ನಡ{% else %}English{% endif %}</span>
+      </span>
+    </li>
+    {% else %}
+    <li class="post-list-empty">No articles yet — check back soon.</li>
+    {% endfor %}
+  </ul>
+</section>
