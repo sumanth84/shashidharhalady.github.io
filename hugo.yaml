@@ -33,9 +33,9 @@ languages:
     weight: 2
     contentDir: content/kn
     params:
-      description: ಶಶಿಧರ ಹಳದಿಯವರ ಲೇಖನಗಳು, ಕನ್ನಡದಲ್ಲಿ.
+      description: ಶಶಿಧರ ಹಾಲಾಡಿಯವರ ಲೇಖನಗಳು, ಕನ್ನಡದಲ್ಲಿ.
       homeInfoParams:
-        Title: "ಶಶಿಧರ ಹಳದಿ"
+        Title: "ಶಶಿಧರ ಹಾಲಾಡಿ"
         Content: "ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದಲ್ಲಿ ಲೇಖನಗಳು."
     menu:
       main:
