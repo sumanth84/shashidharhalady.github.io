@@ -1,0 +1,17 @@
+---
+layout: default
+title: Home
+---
+<p class="site-intro">Articles in English and ಕನ್ನಡ.</p>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li class="post-list-item">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span class="post-list-meta">
+      {{ post.date | date: "%b %-d, %Y" }}
+      &middot; {% if post.lang == "kn" %}ಕನ್ನಡ{% else %}English{% endif %}
+    </span>
+  </li>
+  {% endfor %}
+</ul>

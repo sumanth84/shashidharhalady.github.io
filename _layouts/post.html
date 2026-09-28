@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="post" lang="{{ page.lang | default: site.lang }}">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <p class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    <span class="post-lang">&middot; {% if page.lang == "kn" %}ಕನ್ನಡ{% else %}English{% endif %}</span>
+  </p>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>

@@ -1,0 +1,125 @@
+:root {
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --color-muted: #666666;
+  --color-accent: #8a3ffc;
+  --color-border: #e5e5e5;
+  --font-latin: "Noto Serif", Georgia, "Times New Roman", serif;
+  --font-kannada: "Noto Sans Kannada", "Noto Serif", sans-serif;
+  --max-width: 42rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.25rem;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-family: var(--font-latin), var(--font-kannada);
+  line-height: 1.7;
+}
+
+/* Kannada text needs a taller line-height and the Kannada-first font stack */
+[lang="kn"],
+[lang="kn"] * {
+  font-family: var(--font-kannada), var(--font-latin);
+  line-height: 1.9;
+}
+
+.site-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-nav a {
+  margin-left: 1rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.site-nav a:hover {
+  color: var(--color-accent);
+}
+
+.site-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.site-intro {
+  color: var(--color-muted);
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list-item {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.post-list-item a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.post-list-item a:hover {
+  color: var(--color-accent);
+}
+
+.post-list-meta {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.post-title {
+  margin-bottom: 0.25rem;
+}
+
+.post-meta {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.post-content img {
+  max-width: 100%;
+}
+
+.post-content a {
+  color: var(--color-accent);
+}
+
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-border);
+}
